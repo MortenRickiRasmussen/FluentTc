@@ -25,6 +25,7 @@ namespace FluentTc.Locators
         IBuildHavingBuilder SinceBuild(Action<IBuildHavingBuilder> buildHavingBuilder);
         IBuildHavingBuilder SinceDate(DateTime dateTime);
         IBuildHavingBuilder Project(Action<IBuildProjectHavingBuilder> projectHavingBuilder);
+        IBuildHavingBuilder Number(int number);
     }
 
     internal class BuildHavingBuilder : IBuildHavingBuilder
@@ -164,6 +165,12 @@ namespace FluentTc.Locators
         public IBuildHavingBuilder SinceDate(DateTime dateTime)
         {
             m_Having.Add("sinceDate:" + HttpUtility.UrlEncode(dateTime.ToUniversalTime().ToString(DateFormat)));
+            return this;
+        }
+
+        public IBuildHavingBuilder Number(int number)
+        {
+            m_Having.Add("number:" + number);
             return this;
         }
 
