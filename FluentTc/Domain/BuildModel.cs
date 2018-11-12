@@ -7,7 +7,7 @@ namespace FluentTc.Domain
     {
         public long Id { get; set; }
         public string Number { get; set; }
-        public string Branch { get; set; }
+        public string BranchName { get; set; }
         public string Status { get; set; }
         public string State { get; set; }
         public string BuildTypeId { get; set; }

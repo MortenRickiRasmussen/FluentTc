@@ -61,6 +61,7 @@ namespace FluentTc.Domain
             m_WebUrl = webUrl;
             m_Properties = properties;
             m_Revisions = revisions;
+            m_Branch = branch;
         }
 
         public long Id

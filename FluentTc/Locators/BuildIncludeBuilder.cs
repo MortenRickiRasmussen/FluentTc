@@ -15,7 +15,7 @@ namespace FluentTc.Locators
     {
         readonly IList<string> m_Properties = new List<string>(new[]
         {
-            "buildTypeId", "href", "id", "number", "state", "status","webUrl"
+            "buildTypeId", "href", "id", "number", "state", "status","webUrl", "branchName"
         });
 
         public IBuildIncludeBuilder IncludeStartDate()
