@@ -6,6 +6,7 @@ namespace FluentTc.Locators
     {
         IBranchHavingBuilder Name(string branchName);
         IBranchHavingBuilder Default();
+        IBranchHavingBuilder Default(string prop);
         IBranchHavingBuilder NotDefault();
         IBranchHavingBuilder Unspecified();
         IBranchHavingBuilder NotUnspecified();
@@ -26,6 +27,12 @@ namespace FluentTc.Locators
         public IBranchHavingBuilder Default()
         {
             m_Having.Add("default:" + bool.TrueString);
+            return this;
+        }
+        
+        public IBranchHavingBuilder Default(string prop)
+        {
+            m_Having.Add("default:" + prop);
             return this;
         }
 
